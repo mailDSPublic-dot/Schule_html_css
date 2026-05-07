@@ -3,6 +3,7 @@ body{
     text-align: left;
     color: rgb(255, 255, 255);
     font-size: 2em;
+    margin-left: 20px;
 }
 
 h1{
@@ -52,5 +53,5 @@ button:hover{
     color: black;
     position: absolute;
     top: 7vh;
-    left: 20;
+    left: 15px;
 }
