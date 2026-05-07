@@ -1,17 +1,56 @@
-#samuel_doof{
-    border:7px, solid, rgb(255, 0, 0);
-    border-radius: 7px;
+body{
+    background-color: rgb(1, 0, 18);
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
 }
 
-body{
-    background-color: rgb(116, 72, 0);
+h1{
     text-align: center;
 }
 
-p{
-    display: inline-block;
-    width: fit-content;
-    padding: 10px;
-    font-size: 3rem;
-    font-weight: 900;
+
+button{
+    font-size: 0.5em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+}
+
+button:hover{
+    background-color: rgba(255, 255, 255, 0.652);
+}
+
+
+
+#sidebar {
+    width: 200px;
+    height: 100vh;
+    background: rgb(7, 0, 133);
+    color: white;
+    position: fixed;
+    left: -200px;
+    top: 0;
+    transition: 0.3s;
+    padding-top: 6vh;
+}
+
+#sidebar a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: white;
+}
+
+#sidebar a:first-child{
+    margin-bottom: 30px;
+}
+
+#open_sidebar {
+    color: black;
+    position: absolute;
+    top: 7vh;
+    left: 20;
 }
