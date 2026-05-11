@@ -2,7 +2,7 @@ body{
     background-color: rgb(1, 0, 18);
     text-align: left;
     color: rgb(255, 255, 255);
-    font-size: 2em;
+    font-size: 1.3em;
     margin-left: 20px;
 }
 
@@ -12,7 +12,6 @@ h1{
 
 
 button{
-    font-size: 0.5em;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     cursor: pointer;
@@ -36,6 +35,7 @@ button:hover{
     top: 0;
     transition: 0.3s;
     padding-top: 6vh;
+    font-size: 2em;
 }
 
 #sidebar a {
@@ -52,6 +52,7 @@ button:hover{
 #open_sidebar {
     color: black;
     position: absolute;
-    top: 7vh;
-    left: 15px;
+    font-size: 0.8em;
+    top: 4vh;
+    left: 11px;
 }

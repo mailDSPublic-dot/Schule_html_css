@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            margin-top: 20px;
+        }
+        h2 {
+            margin-top: 40px;
+        }
+        h3{
+            margin-top: 20px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Überblick</h2> <!--Überblick-->
+    <p>CSS ist eine Beschreibungssprache.
+        Sie wird verwendet um das Aussehen der Html Bausteine verändern zu können.<br>
+        HTML erschafft z.B. einen Paragraphen, und CSS ist dann dafür zuständig, dass die Schriftfarbe schwarz ist.
+    </p>
+
+    <h2>Einbindungsmethoden</h2> <!--Einbindungsmethoden-->
+    <p>Man kann CSS über drei verschiedene Methoden einbinden.
+        Das heiß man kann den CSS Code an drei Orte schreiben.</p>
+
+    <h3>Inline CSS</h3> <!--Inline Methode-->
+    <p>Der erste Ort wo man CSS schreiben kann ist direkt beim Element, dass man verändern möchte.
+        Der Vorteil ist, dass es super schnell geht und man nicht groß nachdenken muss.<br>
+        Der Nachteil ist allerdings, dass man den Code nicht wiederverwenden kann, man Struktur mit Design vermischt und
+        es auf Dauer unübersichtlich wird.
+    </p>
+    <p>Die Zeile:</p>
+
+    <code id="inline_css"></code>
+    <script>document.getElementById("inline_css").textContent = `<p style="color: red; font-size: 20px;"> Hallo Welt </p>"`</script>
+
+    <p>Wird zu:</p>
+    <p style="color:red; font-size:  20px;">Hallo Welt</p>
+
+    <h3>Internal CSS</h3> <!--Internal CSS-->
+    <p>Der 2. Ort ist im Head der HTML Datei. Da hat man im Gegenzug zum Inline CSS den Vorteil,
+        dass man Styles wiederverwenden kann und man Struktur und Design teilweise getrennt hat<br>
+        Allerdings ist HTML und CSS dann trotzdem wieder gemischt. Zudem kann man das Layout von CSS dann nicht für
+        mehrere Seiten verwenden.<br>
+        Diese Methode ist gut für kleine Seiten und und erste Projekte, allerdings ist es nachteilhaft wenn man größere
+        Websites baut.
+    </p>
+    <pre><code id=internal_css></code></pre>
+    <script>document.getElementById("internal_css").textContent =
+`<head>
+    <style>
+        p {
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>`
+    </script>
+    <p>Hier sieht man den head des HTML Codes. Dort kann man dann mit style festlegen, dass der folgende Code CSS Code
+        ist.<br>
+        Dort haben wir dann festgelegt, dass alle p Elemente die Farbe Rot haben und die Größe 20 px beträgt. Es macht
+        genau das gleiche wie der Inline CSS Code, aber jetzt für alle p Elemente.
+    </p>
+
+    <h3>External CSS</h3> <!--External CSS-->
+    <p>Die 3. und die deutlich am meisten verwendete Möglichkeit ist die External CSS Einbindungsmethode. Dort schreibt man eine eigene Datei, wo nur CSS Code steht.<br>
+        Der Vorteil ist, dass man alle sauber trennt und man auch immer zwischen HTML und CSS hin und her wechseln kann, ohne jedes mal an den Anfang der Datei scrollenzu müssen.
+    </p>
+
+    <pre><code id = "external_css_1"></code></pre>
+    <script>document.getElementById("external_css_1").textContent = 
+`<head>
+    <link rel="stylesheet" href="style.css">
+</head>`
+    </script>
+    <p>Man schreibt in den Head Abschnitt des HTML Codes nur die eine Zeile und beide Dateien sind miteinander verbunden. rel = "stylesheet" sagt, dass das der CSS Code ist. <br>
+    href = "style.css" bedeutet, dass die Datei, die style.css heißt den Code beinhaltet. Die Vorraussetzung ist natürlich, dass man eine Datei die style.css heißt vorher erstellt hat.<br>
+    In der CSS Datei (style.css) kann man dann einfach wieder den CSS Code schreiben.
+    </p>
+    <pre><code id = "external_css_2"></code></pre>
+    <script>document.getElementById("external_css_2").textContent = 
+`p {
+    color: red;
+    font-size: 20px;
+}`
+    </script>
+
+    <p>Dies macht genau das gleiche wie das Internal CSS. Es färbt alle p Elemente Rot und setzt die größe auf 20px.</p>
+
+</body>
+
+</html>
