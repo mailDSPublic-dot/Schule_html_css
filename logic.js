@@ -28,12 +28,6 @@ function lade_seite(name) {
         .then(html => {
             ausgabe_div.innerHTML = html;
 
-            // CSS einbinden
-            const link = document.createElement("link");
-            link.rel = "stylesheet";
-            link.href = "style_css.css";   // <--- deine CSS-Datei
-            document.head.appendChild(link);
-
             // Scripts ausführen
             ausgabe_div.querySelectorAll("script").forEach(oldScript => {
                 const newScript = document.createElement("script");
@@ -45,9 +39,9 @@ function lade_seite(name) {
 open_sidebar.onclick = sidebar_onclick;
 close_sidebar.onclick = sidebar_onclick;
 
-start_seite.onclick = function () {lade_seite("start_seite")}
+start_seite.onclick = function () { lade_seite("start_seite") }
 
-html_seite.onclick = function () {ausgabe_div.innerHTML = "<p>Hier kommt dann der HTML Text hin.</p>"}
+html_seite.onclick = function () {lade_seite("html/html")}
 
 css_seite.onclick = function () { lade_seite("css/css") }
 

@@ -5,41 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Grundlagen</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-        }
-
-        p {
-            margin-top: 15px;
-        }
-
-        h2 {
-            margin-top: 50px;
-        }
-
-        h3 {
-            margin-top: 30px;
-            text-decoration: underline;
-        }
-
-        code {
-            background-color: rgb(8, 1, 71);
-            color: white;
-            display: block;
-            padding: 5px;
-        }
-
-        pre {
-            margin-top: 10px;
-        }
-    </style>
 </head>
 
 <body>
-
     <h1>HTML Grundlagen</h1>
 
     <h2>Überblick</h2>
@@ -69,9 +37,9 @@
 
     <p>Das wird zu:</p>
 
-    <h1>Große Überschrift</h1>
-    <h2>Kleinere Überschrift</h2>
-    <h3>Noch kleinere Überschrift</h3>
+    <h1 class="normal">Große Überschrift</h1>
+    <h2 class="normal">Kleinere Überschrift</h2>
+    <h3 class="normal">Noch kleinere Überschrift</h3>
 
     <h3>Paragraphen</h3>
     <p>
@@ -133,12 +101,13 @@
 
     <script>
         document.getElementById("img_code").textContent =
-`<img src="bild.jpg" width="300">`
+`<img src="bild.jpg" width="300" height="200">`
     </script>
 
     <p>
-        Das würde ein Bild mit der Breite 300 Pixel anzeigen.
+        Das zeigt ein Bild mit der Breite 300 und der Höhe von 200 Pixel anzeigen.
     </p>
+    <img src="html/html_bild.jpg" width="300" height="200">
 
     <h3>Listen</h3>
     <p>
@@ -179,7 +148,20 @@
 
     <p>Das wird zu:</p>
 
-    <button>Klick mich</button>
+    <button id = "klick_mich">Klick mich</button>
+
+    <script>
+        button = document.getElementById("klick_mich")
+        button.onclick = function(){
+            if (button.textContent == "Klick mich"){
+            button.textContent = "Du hast mich geklickt!"
+            }
+            else {
+                button.textContent = "Klick mich"
+            }
+        }
+
+    </script>
 
     <h3>Div Elemente</h3>
     <p>

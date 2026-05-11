@@ -60,3 +60,26 @@ button:hover{
     top: 4vh;
     left: 11px;
 }
+
+p {
+    margin-top: 20px;
+}
+h2 {
+    margin-top: 50px;
+}
+h3{
+    margin-top: 30px;
+    text-decoration: underline;
+}
+code {
+    background-color: rgb(8, 1, 71);
+    display: block;
+    padding: 3px;
+}
+
+.normal {
+    text-align: left;
+    text-decoration: none;
+    margin: none;
+    padding: none;
+}
