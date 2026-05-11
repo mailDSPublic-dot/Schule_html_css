@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Grundlagen</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        p {
+            margin-top: 15px;
+        }
+
+        h2 {
+            margin-top: 50px;
+        }
+
+        h3 {
+            margin-top: 30px;
+            text-decoration: underline;
+        }
+
+        code {
+            background-color: rgb(8, 1, 71);
+            color: white;
+            display: block;
+            padding: 5px;
+        }
+
+        pre {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>HTML Grundlagen</h1>
+
+    <h2>Überblick</h2>
+    <p>
+        HTML ist eine Auszeichnungssprache. <br>
+        Sie wird verwendet um den Inhalt einer Website zu erstellen und zu strukturieren.
+        Mit HTML kann man z.B. Überschriften, Texte, Bilder oder Links einfügen.
+    </p>
+
+    <h2>Wichtige HTML Elemente</h2>
+
+    <h3>Überschriften</h3>
+    <p>
+        Mit den h-Elementen kann man Überschriften erstellen.
+        Es gibt die Größen h1 bis h6.
+        h1 ist die größte Überschrift und h6 die kleinste.
+    </p>
+
+    <pre><code id="heading_code"></code></pre>
+
+    <script>
+        document.getElementById("heading_code").textContent =
+`<h1>Große Überschrift</h1>
+<h2>Kleinere Überschrift</h2>
+<h3>Noch kleinere Überschrift</h3>`
+    </script>
+
+    <p>Das wird zu:</p>
+
+    <h1>Große Überschrift</h1>
+    <h2>Kleinere Überschrift</h2>
+    <h3>Noch kleinere Überschrift</h3>
+
+    <h3>Paragraphen</h3>
+    <p>
+        Mit dem p-Element erstellt man normalen Text bzw. Absätze.
+    </p>
+
+    <pre><code id="paragraph_code"></code></pre>
+
+    <script>
+        document.getElementById("paragraph_code").textContent =
+`<p>Das ist ein Paragraph.</p>`
+    </script>
+
+    <p>Das wird zu:</p>
+
+    <p>Das ist ein Paragraph.</p>
+
+    <h3>Zeilenumbruch</h3>
+    <p>
+        Mit br kann man einen Zeilenumbruch erzeugen.
+        Der Text springt dann in die nächste Zeile.
+    </p>
+
+    <pre><code id="br_code"></code></pre>
+
+    <script>
+        document.getElementById("br_code").textContent =
+`Hallo <br> Welt`
+    </script>
+
+    <p>Das wird zu:</p>
+
+    Hallo <br> Welt
+
+    <h3>Links</h3>
+    <p>
+        Mit dem a-Element kann man Links erstellen.
+        href gibt an, wohin der Link führt.
+    </p>
+
+    <pre><code id="link_code"></code></pre>
+
+    <script>
+        document.getElementById("link_code").textContent =
+`<a href="https://google.de">Google</a>`
+    </script>
+
+    <p>Das wird zu:</p>
+
+    <a href="https://google.de">Google</a>
+
+    <h3>Bilder</h3>
+    <p>
+        Mit img kann man Bilder einfügen.
+        src gibt den Speicherort des Bildes an.
+    </p>
+
+    <pre><code id="img_code"></code></pre>
+
+    <script>
+        document.getElementById("img_code").textContent =
+`<img src="bild.jpg" width="300">`
+    </script>
+
+    <p>
+        Das würde ein Bild mit der Breite 300 Pixel anzeigen.
+    </p>
+
+    <h3>Listen</h3>
+    <p>
+        Mit ul erstellt man eine ungeordnete Liste.
+        Mit li erstellt man die einzelnen Listenpunkte.
+    </p>
+
+    <pre><code id="list_code"></code></pre>
+
+    <script>
+        document.getElementById("list_code").textContent =
+`<ul>
+    <li>Apfel</li>
+    <li>Banane</li>
+    <li>Orange</li>
+</ul>`
+    </script>
+
+    <p>Das wird zu:</p>
+
+    <ul>
+        <li>Apfel</li>
+        <li>Banane</li>
+        <li>Orange</li>
+    </ul>
+
+    <h3>Buttons</h3>
+    <p>
+        Mit button kann man einen Knopf erstellen.
+    </p>
+
+    <pre><code id="button_code"></code></pre>
+
+    <script>
+        document.getElementById("button_code").textContent =
+`<button>Klick mich</button>`
+    </script>
+
+    <p>Das wird zu:</p>
+
+    <button>Klick mich</button>
+
+    <h3>Div Elemente</h3>
+    <p>
+        Das div-Element wird verwendet um Bereiche oder Container zu erstellen.
+        Es wird oft genutzt um Inhalte zu gruppieren.
+    </p>
+
+    <pre><code id="div_code"></code></pre>
+
+    <script>
+        document.getElementById("div_code").textContent =
+`<div>
+    <h2>Titel</h2>
+    <p>Text im Container</p>
+</div>`
+    </script>
+
+    <p>
+        Das div selbst sieht man nicht direkt.
+        Es hilft dabei Inhalte zu strukturieren.
+    </p>
+
+</body>
+
+</html>
