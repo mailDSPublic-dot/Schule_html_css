@@ -10,11 +10,17 @@
 <body>
     <h1>CSS - Einbindungsmethoden</h1>
 
-    <h2>Einbindungsmethoden</h2> <!--Einbindungsmethoden-->
-    <p>Man kann CSS über drei verschiedene Methoden einbinden.
-        Das heiß man kann den CSS Code an drei Orte schreiben.</p>
+    <h2>Was sind Einbindungsmethoden</h2> <!--Einbindungsmethoden-->
+    <p>CSS kann auf drei grundlegende Arten in HTML eingebunden werden, die sich in Struktur, 
+        Übersichtlichkeit und Wiederverwendbarkeit unterscheiden. 
+        Bei Inline‑CSS stehen die Styles direkt im HTML‑Element, was schnell ist, 
+        aber den Code unübersichtlich macht. Internal‑CSS wird im style‑Block im head 
+        einer Seite definiert und eignet sich für kleinere Projekte oder einzelne Seiten. External‑CSS nutzt 
+        eine separate .css‑Datei und ist der Standard im modernen Web, weil es Struktur und Design sauber trennt 
+        und für mehrere Seiten wiederverwendbar ist. Diese Methoden ermöglichen es, Layouts flexibel zu gestalten 
+        und Webseiten effizient zu pflegen.</p>
 
-    <h3>Inline CSS</h3> <!--Inline Methode-->
+    <h2>Inline CSS</h2> <!--Inline Methode-->
     <p>Der erste Ort wo man CSS schreiben kann ist direkt beim Element, dass man verändern möchte.
         Der Vorteil ist, dass es super schnell geht und man nicht groß nachdenken muss.<br>
         Der Nachteil ist allerdings, dass man den Code nicht wiederverwenden kann, man Struktur mit Design vermischt und
@@ -28,7 +34,7 @@
     <p>Wird zu:</p>
     <p style="color:red; font-size:  50px;">Hallo Welt</p>
 
-    <h3>Internal CSS</h3> <!--Internal CSS-->
+    <h2>Internal CSS</h2> <!--Internal CSS-->
     <p>Der 2. Ort ist im Head der HTML Datei. Da hat man im Gegenzug zum Inline CSS den Vorteil,
         dass man Styles wiederverwenden kann und man Struktur und Design teilweise getrennt hat<br>
         Allerdings ist HTML und CSS dann trotzdem wieder gemischt. Zudem kann man das Layout von CSS dann nicht für
@@ -53,7 +59,7 @@
         genau das gleiche wie der Inline CSS Code, aber jetzt für alle p Elemente.
     </p>
 
-    <h3>External CSS</h3> <!--External CSS-->
+    <h2>External CSS</h2> <!--External CSS-->
     <p>Die 3. und die deutlich am meisten verwendete Möglichkeit ist die External CSS Einbindungsmethode. Dort schreibt man eine eigene Datei, wo nur CSS Code steht.<br>
         Der Vorteil ist, dass man alle sauber trennt und man auch immer zwischen HTML und CSS hin und her wechseln kann, ohne jedes mal an den Anfang der Datei scrollenzu müssen.
     </p> 

@@ -2,10 +2,15 @@ const h1 = document.getElementById("h1");
 const sidebar = document.getElementById("sidebar");
 const open_sidebar = document.getElementById("open_sidebar");
 const close_sidebar = document.getElementById("close_sidebar");
+
 const html_seite = document.getElementById("html_seite");
 const html_wichtige_elemente_seite = document.getElementById("html_wichtige_elemente");
+
 const css_seite = document.getElementById("css_seite");
 const css_einbindungsmethoden_seite = document.getElementById("css_einbindungsmethode");
+const css_selektoren_seite = document.getElementById("css_selektoren");
+const css_box_elemente = document.getElementById("css_box_elemente")
+
 const start_seite = document.getElementById("start_seite");
 const ausgabe_div = document.getElementById("ausgabe");
 
@@ -47,6 +52,8 @@ html_wichtige_elemente_seite.onclick = function () {lade_seite("html/wichtige_el
 
 css_seite.onclick = function () { lade_seite("css/css") }
 css_einbindungsmethoden_seite.onclick = function () { lade_seite("css/verbindungsmethoden") }
+css_selektoren_seite.onclick = function () { lade_seite("css/selektoren") }
+css_box_elemente.onclick =  function () { lade_seite("css/box_elemente") }
 
 
 //Lade Startseite am Anfang

@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>CSS - Selektoren</h1>
-    <h2>Was ist ein Selektor?</h2>
-    <p>CSS‑Selektoren bestimmen, welche HTML‑Elemente von einer bestimmten Regel angesprochen werden. 
-        Sie ermöglichen es, gezielt einzelne Elemente, Gruppen von Elementen oder 
+    <h2>Was ist ein Selektor?</h2> <!--Grundlagen-->
+    <p>CSS‑Selektoren bestimmen, welche HTML‑Elemente von einer bestimmten Regel angesprochen werden.
+        Sie ermöglichen es, gezielt einzelne Elemente, Gruppen von Elementen oder
         bestimmte Zustände wie Hover oder Fokus zu stylen.</p>
 
-    <h2>Element-Selektoren</h2>
+    <h2>Element-Selektoren</h2> <!--Elemente-->
     <p>Mit den Element-Selektoren können alle Elemente eines bestimmten Typs angewählt werden.
         Das Folgende Beispiel ändert die Farbe von allen p Elementen auf Rot und setzt die Größe auf 20px.
     </p>
     <pre><code id = "element_selektor"></code></pre>
-    <script>document.getElementById("element_selektor").textContent = 
+    <script>document.getElementById("element_selektor").textContent =
 `p {
     color: red;
     font-size: 20px;
@@ -25,24 +27,55 @@
     </script>
 
 
-    <h2>Klassen-Selektoren</h2>
+    <h2>Klassen-Selektoren</h2> <!--Klassen-->
     <p>Mit den Klassen-Selektoren kann man alle Elemente einer bestimmten Klasse ansprechen.
-        Dazu muss man vorher im HTML Dokument dann Klassen vergeben. 
+        Dazu muss man vorher im HTML Code Klassen vergeben.
         In CSS spricht man diese dann mit einem Punkt vor dem Klassennamen an.
     </p>
     <p>HTML:</p>
-    <code id = "klassen_html"></code>
-    <script>document.getElementById("klassen_html").textContent = 
-`<p class = "fette_elemente">ACHTUNG</p>`
+    <pre><code id = "klassen_html"></code></pre>
+    <script>document.getElementById("klassen_html").textContent =
+`<p class = "rote_elemente">ACHTUNG</p>
+<p class = "rote_elemente">Hier ist Rote Schrift</p>`
     </script>
     <p>CSS:</p>
     <pre><code id="klassen_css"></code></pre>
-    <script>document.getElementById("klassen_css").textContent = 
-`.fette_elemente {
+    <script>document.getElementById("klassen_css").textContent =
+`.rote_elemente {
+    color: red;
+    font-size: 20px;
+}
+`    </script>
+
+    <h2>ID-Selektoren</h2> <!--ID-->
+    <p>Mit den ID-Selektoren kann man einzelne Elemente ansprechen.
+        Dazu muss man im HTML Code den einzelnen Elementen eine ID geben.
+        Die spricht man dann mit einem # vorher an.
+    </p>
+    <p>HTML:</p>
+
+    <pre><code id = "selektoren_html"></code></pre>
+    <script>
+        document.getElementById("selektoren_html").textContent =
+`<p id = "rotes_alphabet">abcdefghijklmnopqrstuvwxyz</p>`
+    </script>
+
+    <p>CSS:</p>
+    <pre><code id = "selektoren_css"></code></pre>
+    <script>
+        document.getElementById("selektoren_css").textContent =
+`#rotes_alphabet {
     color: red;
     font-size: 20px;
 }
 `
     </script>
+
+    <p>Es gibt noch mehr Selektoren und man kann auch Selektoren verschachteln oder bei verscheiden Aktionen
+        verschieden reagieren, um mehr darüber herauszufinden kann man sich auf der 
+        <a href = "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors">Offiziellen CSS Documentation</a>
+        weiter informieren.
+    </p>
 </body>
+
 </html>

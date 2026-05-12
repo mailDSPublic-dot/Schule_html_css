@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CSS - Box Elemente</h1>
+    <h2>Was sind Box Elemente?</h2>
+    <p>Boxelemente bilden das grundlegende Layout‑Modell im Web, da jedes HTML‑Element als rechteckige Box dargestellt wird. 
+        Jede Box besteht aus Inhalt(Content), Abstand zum Rand (Padding), Rand(Border) und Abstand(Margin) zu anderen Elemenren, 
+        diese zusammen bestimmen, wie viel Platz ein Element einnimmt. 
+        Das Box‑Modell ist entscheidend, um Abstände, Größen und Layouts präzise zu kontrollieren. 
+        Ohne ein Verständnis der Boxelemente wäre modernes, strukturiertes Webdesign kaum möglich.
+        In dem Artikel beschäftigen wir uns erstmal nicht mit dem Content sondern mit den anderen 3.
+    </p>
+
+    <h2>Padding</h2>
+    <p>Das Padding sagt, wie viel Abstand vom Content bis zur Border ist.
+        Man kann dabei jede der 4 Seiten einzeln oder einen Abstand, welcher auf allen 4 Seiten gleich gilt festlegen.
+    </p>
+    <p>
+        Für alle Folgende Elemente wurde eine Border geschaffen, damit man das Padding sieht und <br>
+        dispaly auf inline gesetzt, damit sich das Element nur so viel Platz nimmt, wie es braucht.<br>
+        CSS:
+    </p>
+    <pre><code id = "normal_padding_c"></code></pre>
+    <script>document.getElementById("normal_padding_c").textContent = 
+`p { 
+    border: 3px solid red;
+    display: inline;
+}`
+    </script>
+
+
+    <p>Für einen normalen Text muss man gar nichts verändern.</p>
+    <p style="border: 3px solid red; display: inline;">So sieht es ohne Padding aus.</p>
+
+    <p>Beim folgenden Element wurde mit padding der Abstand zur Border auf allen Seiten verändert.
+        CSS:</p>
+    <pre><code id = "padding" style="margin-bottom: 30px;"></code></pre>
+    <script>document.getElementById("padding").textContent =
+`p {
+    padding: 20px;
+}`
+    </script>
+    <p style="padding: 20px; border: 3px solid red; display: inline; margin-bottom: 30px;">So sieht es mit 20px auf jeder Seite aus</p>
+    
+
+    <p style="margin-top: 30px;">Beim nächsten Element wurde nur padding links(left) und unten(bottom) gesetzt. 
+        Es gibt natürlich auch noch oben(top) und rechts(right).</p>
+    <pre><code id = "padding_links_unten" ></code></pre>
+    <script>document.getElementById("padding_links_unten").textContent =
+`p {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}`
+    </script>
+    <p style="padding-left: 20px; padding-bottom: 20px; border: 3px solid red; display: inline;"> So sieht es mit 20px links und 20px unten aus</p>
+    
+    <h2>Border</h2>
+    <p>Mit dem border Element kann man Grundlegend verändern, wie die Border aussieht.<br>
+        Es besteht aus 3 Parametern: Stärke, Design, Farbe
+    </p>
+
+</body>
+</html>
