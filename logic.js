@@ -3,8 +3,9 @@ const sidebar = document.getElementById("sidebar");
 const open_sidebar = document.getElementById("open_sidebar");
 const close_sidebar = document.getElementById("close_sidebar");
 const html_seite = document.getElementById("html_seite");
+const html_wichtige_elemente_seite = document.getElementById("html_wichtige_elemente");
 const css_seite = document.getElementById("css_seite");
-const einbindungsmethoden_seite = document.getElementById("einbindungsmethode");
+const css_einbindungsmethoden_seite = document.getElementById("css_einbindungsmethode");
 const start_seite = document.getElementById("start_seite");
 const ausgabe_div = document.getElementById("ausgabe");
 
@@ -42,10 +43,12 @@ close_sidebar.onclick = sidebar_onclick;
 start_seite.onclick = function () { lade_seite("start_seite") }
 
 html_seite.onclick = function () {lade_seite("html/html")}
+html_wichtige_elemente_seite.onclick = function () {lade_seite("html/wichtige_elemente")}
 
 css_seite.onclick = function () { lade_seite("css/css") }
+css_einbindungsmethoden_seite.onclick = function () { lade_seite("css/verbindungsmethoden") }
 
-einbindungsmethoden_seite.onclick = function () { lade_seite("css/verbindungsmethoden") }
 
+//Lade Startseite am Anfang
 sidebar_onclick()
 start_seite.onclick()

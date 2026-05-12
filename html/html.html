@@ -4,184 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Grundlagen</title>
+    <title>HTML</title>
 </head>
 
 <body>
-    <h1>HTML Grundlagen</h1>
+    <h1>HTML</h1>
 
-    <h2>Überblick</h2>
+    <h2>Was ist HTML?</h2>
     <p>
-        HTML ist eine Auszeichnungssprache. <br>
-        Sie wird verwendet um den Inhalt einer Website zu erstellen und zu strukturieren.
-        Mit HTML kann man z.B. Überschriften, Texte, Bilder oder Links einfügen.
+        HTML ist die grundlegende Auszeichnungssprache des Webs. 
+        Sie beschreibt die Struktur einer Webseite, also welche Elemente vorhanden sind 
+        – Überschriften, Absätze, Bilder, Links, Tabellen und vieles mehr. 
+        HTML legt fest, <em>was</em> auf einer Seite existiert, aber nicht, wie es aussieht. 
+        Durch seine klare Struktur bildet HTML das Fundament, auf dem CSS und JavaScript aufbauen.
     </p>
 
-    <h2>Wichtige HTML Elemente</h2>
-
-    <h3>Überschriften</h3>
+    <h2>Wie ist HTML entstanden?</h2>
     <p>
-        Mit den h-Elementen kann man Überschriften erstellen.
-        Es gibt die Größen h1 bis h6.
-        h1 ist die größte Überschrift und h6 die kleinste.
+        HTML wurde Anfang der 1990er‑Jahre von Tim Berners‑Lee entwickelt, 
+        um wissenschaftliche Dokumente im Internet einfach verlinken und darstellen zu können. 
+        Die erste Version war sehr simpel und enthielt nur wenige Elemente. 
+        Mit der Zeit wuchs HTML jedoch stark, und 1995 wurde HTML 2.0 als erster offizieller Standard veröffentlicht. 
+        Heute wird HTML vom W3C und der WHATWG weiterentwickelt – die moderne Version heißt HTML5 
+        und unterstützt Multimedia, semantische Elemente und interaktive Inhalte.
     </p>
 
-    <pre><code id="heading_code"></code></pre>
-
-    <script>
-        document.getElementById("heading_code").textContent =
-`<h1>Große Überschrift</h1>
-<h2>Kleinere Überschrift</h2>
-<h3>Noch kleinere Überschrift</h3>`
-    </script>
-
-    <p>Das wird zu:</p>
-
-    <h1 class="normal">Große Überschrift</h1>
-    <h2 class="normal">Kleinere Überschrift</h2>
-    <h3 class="normal">Noch kleinere Überschrift</h3>
-
-    <h3>Paragraphen</h3>
+    <h2>Warum gibt es HTML?</h2>
     <p>
-        Mit dem p-Element erstellt man normalen Text bzw. Absätze.
+        HTML existiert, um Inhalte im Web strukturiert und verständlich darzustellen. 
+        Ohne HTML gäbe es keine Webseiten, keine Navigation, keine Texte, keine Bilder. 
+        HTML sorgt dafür, dass Browser Inhalte korrekt interpretieren und Nutzern anzeigen können. 
+        Gleichzeitig ermöglicht es Suchmaschinen, Screenreadern und anderen Tools, 
+        Webseiten zu analysieren und barrierefrei zugänglich zu machen. 
+        HTML ist damit die Basis jeder Webanwendung – vom einfachen Blog bis zur komplexen Web‑App.
     </p>
 
-    <pre><code id="paragraph_code"></code></pre>
-
-    <script>
-        document.getElementById("paragraph_code").textContent =
-`<p>Das ist ein Paragraph.</p>`
-    </script>
-
-    <p>Das wird zu:</p>
-
-    <p>Das ist ein Paragraph.</p>
-
-    <h3>Zeilenumbruch</h3>
+    <h2>Warum interpretieren alle Browser HTML gleich?</h2>
     <p>
-        Mit br kann man einen Zeilenumbruch erzeugen.
-        Der Text springt dann in die nächste Zeile.
-    </p>
-
-    <pre><code id="br_code"></code></pre>
-
-    <script>
-        document.getElementById("br_code").textContent =
-`Hallo <br> Welt`
-    </script>
-
-    <p>Das wird zu:</p>
-
-    Hallo <br> Welt
-
-    <h3>Links</h3>
-    <p>
-        Mit dem a-Element kann man Links erstellen.
-        href gibt an, wohin der Link führt.
-    </p>
-
-    <pre><code id="link_code"></code></pre>
-
-    <script>
-        document.getElementById("link_code").textContent =
-`<a href="https://google.de">Google</a>`
-    </script>
-
-    <p>Das wird zu:</p>
-
-    <a href="https://google.de">Google</a>
-
-    <h3>Bilder</h3>
-    <p>
-        Mit img kann man Bilder einfügen.
-        src gibt den Speicherort des Bildes an.
-    </p>
-
-    <pre><code id="img_code"></code></pre>
-
-    <script>
-        document.getElementById("img_code").textContent =
-`<img src="bild.jpg" width="300" height="200">`
-    </script>
-
-    <p>
-        Das zeigt ein Bild mit der Breite 300 und der Höhe von 200 Pixel anzeigen.
-    </p>
-    <img src="html/html_bild.jpg" width="300" height="200">
-
-    <h3>Listen</h3>
-    <p>
-        Mit ul erstellt man eine ungeordnete Liste.
-        Mit li erstellt man die einzelnen Listenpunkte.
-    </p>
-
-    <pre><code id="list_code"></code></pre>
-
-    <script>
-        document.getElementById("list_code").textContent =
-`<ul>
-    <li>Apfel</li>
-    <li>Banane</li>
-    <li>Orange</li>
-</ul>`
-    </script>
-
-    <p>Das wird zu:</p>
-
-    <ul>
-        <li>Apfel</li>
-        <li>Banane</li>
-        <li>Orange</li>
-    </ul>
-
-    <h3>Buttons</h3>
-    <p>
-        Mit button kann man einen Knopf erstellen.
-    </p>
-
-    <pre><code id="button_code"></code></pre>
-
-    <script>
-        document.getElementById("button_code").textContent =
-`<button>Klick mich</button>`
-    </script>
-
-    <p>Das wird zu:</p>
-
-    <button id = "klick_mich">Klick mich</button>
-
-    <script>
-        button = document.getElementById("klick_mich")
-        button.onclick = function(){
-            if (button.textContent == "Klick mich"){
-            button.textContent = "Du hast mich geklickt!"
-            }
-            else {
-                button.textContent = "Klick mich"
-            }
-        }
-
-    </script>
-
-    <h3>Div Elemente</h3>
-    <p>
-        Das div-Element wird verwendet um Bereiche oder Container zu erstellen.
-        Es wird oft genutzt um Inhalte zu gruppieren.
-    </p>
-
-    <pre><code id="div_code"></code></pre>
-
-    <script>
-        document.getElementById("div_code").textContent =
-`<div>
-    <h2>Titel</h2>
-    <p>Text im Container</p>
-</div>`
-    </script>
-
-    <p>
-        Das div selbst sieht man nicht direkt.
-        Es hilft dabei Inhalte zu strukturieren.
+        Damit Webseiten überall funktionieren, folgen Browser gemeinsamen Webstandards, 
+        die vom W3C und der WHATWG festgelegt werden. 
+        Browser lesen HTML von oben nach unten ein und bauen daraus das DOM, 
+        also die interne Struktur der Seite. 
+        Durch einheitliche Regeln wird sichergestellt, dass Überschriften, Absätze, Listen 
+        und andere Elemente überall gleich funktionieren. 
+        Ohne diese Standards würde jede Website je nach Browser völlig anders aussehen 
+        und das Web wäre chaotisch und unzuverlässig.
     </p>
 
 </body>

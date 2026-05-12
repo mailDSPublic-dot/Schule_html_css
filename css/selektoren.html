@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CSS - Selektoren</h1>
+    <h2>Was ist ein Selektor?</h2>
+    <p>CSS‑Selektoren bestimmen, welche HTML‑Elemente von einer bestimmten Regel angesprochen werden. 
+        Sie ermöglichen es, gezielt einzelne Elemente, Gruppen von Elementen oder 
+        bestimmte Zustände wie Hover oder Fokus zu stylen.</p>
+
+    <h2>Element-Selektoren</h2>
+    <p>Mit den Element-Selektoren können alle Elemente eines bestimmten Typs angewählt werden.
+        Das Folgende Beispiel ändert die Farbe von allen p Elementen auf Rot und setzt die Größe auf 20px.
+    </p>
+    <pre><code id = "element_selektor"></code></pre>
+    <script>document.getElementById("element_selektor").textContent = 
+`p {
+    color: red;
+    font-size: 20px;
+}`
+    </script>
+
+
+    <h2>Klassen-Selektoren</h2>
+    <p>Mit den Klassen-Selektoren kann man alle Elemente einer bestimmten Klasse ansprechen.
+        Dazu muss man vorher im HTML Dokument dann Klassen vergeben. 
+        In CSS spricht man diese dann mit einem Punkt vor dem Klassennamen an.
+    </p>
+    <p>HTML:</p>
+    <code id = "klassen_html"></code>
+    <script>document.getElementById("klassen_html").textContent = 
+`<p class = "fette_elemente">ACHTUNG</p>`
+    </script>
+    <p>CSS:</p>
+    <pre><code id="klassen_css"></code></pre>
+    <script>document.getElementById("klassen_css").textContent = 
+`.fette_elemente {
+    color: red;
+    font-size: 20px;
+}
+`
+    </script>
+</body>
+</html>

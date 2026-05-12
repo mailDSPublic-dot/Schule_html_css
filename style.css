@@ -40,17 +40,24 @@ button:hover{
 
 #sidebar a {
     display: block;
-    padding: 12px;
+    padding-left: 12px;
     text-decoration: none;
     color: white;
+    margin-top : 10px
 }
 
 .sub {
     font-size: 0.6em;
 }
 
+#sidebar a.main{
+    margin-top: 35px;
+}
+
+
 #sidebar a:first-child{
-    margin-bottom: 30px;
+    margin-top: 0px;
+    margin-bottom: 50px;
 }
 
 #open_sidebar {
