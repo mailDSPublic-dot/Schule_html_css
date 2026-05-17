@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .bor_inl{
+            display: inline;
+            border: 3px, solid, red;
+        }
+    </style>
 </head>
 <body>
     <h1>CSS - Box Elemente</h1>
@@ -21,8 +27,7 @@
         Man kann dabei jede der 4 Seiten einzeln oder einen Abstand, welcher auf allen 4 Seiten gleich gilt festlegen.
     </p>
     <p>
-        Für alle Folgende Elemente wurde eine Border geschaffen, damit man das Padding sieht und <br>
-        dispaly auf inline gesetzt, damit sich das Element nur so viel Platz nimmt, wie es braucht.<br>
+        (Für alle Folgende Elemente wurde eine Border geschaffen, damit man das Padding sieht und dispaly auf inline gesetzt, damit sich das Element nur so viel Platz nimmt, wie es braucht.)<br>
         CSS:
     </p>
     <pre><code id = "normal_padding_c"></code></pre>
@@ -35,34 +40,87 @@
 
 
     <p>Für einen normalen Text muss man gar nichts verändern.</p>
-    <p style="border: 3px solid red; display: inline;">So sieht es ohne Padding aus.</p>
+    <p class = "bor_inl">So sieht es ohne Padding aus.</p>
 
-    <p>Beim folgenden Element wurde mit padding der Abstand zur Border auf allen Seiten verändert.
+    <p>Beim folgenden Element wurde mit padding der Abstand zur Border auf allen Seiten verändert.<br>
         CSS:</p>
-    <pre><code id = "padding" style="margin-bottom: 30px;"></code></pre>
-    <script>document.getElementById("padding").textContent =
+    <pre><code id = "padding"></code></pre>
+    <script>padding.textContent =
 `p {
-    padding: 20px;
+    padding: 10px;
 }`
     </script>
-    <p style="padding: 20px; border: 3px solid red; display: inline; margin-bottom: 30px;">So sieht es mit 20px auf jeder Seite aus</p>
+    <p class = "bor_inl" style="padding: 10px; margin-bottom: 30px;">So sieht es mit 10px auf jeder Seite aus</p>
     
 
     <p style="margin-top: 30px;">Beim nächsten Element wurde nur padding links(left) und unten(bottom) gesetzt. 
-        Es gibt natürlich auch noch oben(top) und rechts(right).</p>
+        Es gibt natürlich auch noch oben(top) und rechts(right).<br>CSS:</p>
     <pre><code id = "padding_links_unten" ></code></pre>
-    <script>document.getElementById("padding_links_unten").textContent =
+    <script>padding_links_unten.textContent =
 `p {
     padding-left: 20px;
     padding-bottom: 20px;
 }`
     </script>
-    <p style="padding-left: 20px; padding-bottom: 20px; border: 3px solid red; display: inline;"> So sieht es mit 20px links und 20px unten aus</p>
+    <p class = "bor_inl" style="padding-left: 20px; padding-bottom: 20px;"> So sieht es mit 20px links und 20px unten aus</p>
     
     <h2>Border</h2>
-    <p>Mit dem border Element kann man Grundlegend verändern, wie die Border aussieht.<br>
-        Es besteht aus 3 Parametern: Stärke, Design, Farbe
+    <p>Mit dem border Element kann man Grundlegend verändern, wie der Rand aussieht.<br>
+        Es besteht aus 3 Parametern: Dicke, Design, Farbe.
     </p>
+    
+    <h3>Dicke</h3>
+    <p>Mit dem ersten Parameter des border Elements bestimmt man, wie dick die Linie ist, welche um das Element geht
+        Diese kann man mit vielen verschiedenen Einheiten angeben. Einfacherheitshalber nehmen wir jetzt px was Pixel darstellt.<br>
+        CSS:
+    </p>
+    <pre><code>p {
+    border: 10px, solid, red;
+}</code></pre>
+    <p style = "display: inline; border: 10px, solid, red;">Ich bin 10px dick umrandet!</p>
+    <p style = "display: inline; border: 1px, solid, red;">Ich bin 1px dick umrandet!</p>
+
+    <h3>Style</h3>
+    <p>Der zweite Parameter ist dafür zuständig, welche Form die Linie hat. 
+        Dafür hat man eine große Auswahl. Die möglichen Typen sind: none, hidden, dotted, dashed, solid, double, groove, ridge, inset und outset  
+        Für mehr kann man sich <a href = "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border">
+        auf der Offiziellen Documentation</a> weiter informieren. Bis jetzt sind alle typen solid. <br>CSS:</p>
+    
+    <pre><code>p {
+    border: 3px, dashed, red;
+}</code></pre>
+    
+    <p style = "display: inline; border: 3px, dashed, red;">Ich bin umstrichelt!</p>
+
+    <pre><code>p {
+    border: 10px, groove, red;
+}</code></pre>
+    
+    <p style = "display: inline; border: 10px, groove, red;">Ich bin 3D!</p>
+
+    <h3>Farbe</h3>
+    <p>Der dritte Parameter ist die Farbe. Dort hat man zum einen die meisten Farben (natürlich auf Englisch benannt) und unter anderem auch rgb(red, grenn, blue). Dort kann man aus den drei Farben jede belibige mischen. Dabei kann jede Farbe bis zu 255 gehen.<br></p>
+
+
+    <pre><code>p {
+    border: 3px, double, green;
+}</code></pre>
+    <p style="border: 3px, double, blue;  display: inline;">Daraus entstehe ich!</p>
+
+    <pre><code>p {
+    border: 3px, dotted, rgb(0, 255, 0);
+}</code></pre>
+    <p style="border: 3px, dotted, rgb(0, 255, 0); display: inline;">Das gleiche in Grün</p>
+
+    <h2>Margin</h2>
+
+    <p>Margin ist dafür da, um den Abstand zu den anderen Elementen zu regeln. Damit kann man den Abstand vom Element zu den verscheiden Seiten angeben.</p>
+    <p>Wie beim Padding hat man auch hier zwischen der gesamten Seiten und den einzelnen wählen.<br>CSS:</p>
+
+    <pre><code>p {
+    marign: 100px;
+}</code></pre>
+    <p style="margin: 100px;">Ich habe auf allen Seiten mindestens 100px Abstand zu allem, es kann natürlich auch mehr sein, aber es sind immer mindestens 100 Pixel.</p>
 
 </body>
 </html>
